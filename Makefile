@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 
-PORTNAME=	mkvtoolnix
+PORTNAME=	mkvtoolnix-lite
 PORTVERSION=	58.0.0
 PORTREVISION=	1
 CATEGORIES=	multimedia audio
@@ -14,6 +14,9 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_sparc64=	does not install
+
+CONFLICTS_INSTALL?= mkvtoolnix
+DISTNAME=	mkvtoolnix-${DISTVERSION}
 
 BUILD_DEPENDS=	rake:devel/rubygem-rake \
 		docbook-xsl>=0:textproc/docbook-xsl \
